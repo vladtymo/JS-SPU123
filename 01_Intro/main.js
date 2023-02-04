@@ -1,4 +1,4 @@
-// ------- data types
+// -=-=-=-=-=-=-=-=- data types -=-=-=-=-=-=-=-=-
 
 let koef = 10.55;
 let login = "super_user123";
@@ -28,7 +28,7 @@ console.log(`Array: ${array}, type: ${typeof (array)}`);
 koef = 'A';
 console.log(`Number: ${koef}, type: ${typeof (koef)}`);
 
-// ------- browser dialogs
+// -=-=-=-=-=-=-=-=- browser dialogs -=-=-=-=-=-=-=-=-
 alert("Some alert message!");
 username = prompt("Enter your name:");
 
@@ -43,3 +43,11 @@ console.log('Step: ${2 ** 8}');
 
 let isContinue = confirm("Do you want to continue?");
 alert(isContinue ? "Good!" : "Exit!");
+
+// -=-=-=-=-=-=-=-=- functions -=-=-=-=-=-=-=-=-
+function sub(a, b) {
+    if (b == 666) console.warn("Bad request!");
+    return a - b;
+}
+
+console.log("Result:", sub(20, 5));
