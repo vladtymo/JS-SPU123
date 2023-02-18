@@ -18,7 +18,7 @@ class Car {
         this.color = newColor;
     }
     render() {
-        document.write();
+        document.write(`Car: ${this.model}, color: ${this.color}, year: ${this.year}`);
     }
 
     // getter / setter
@@ -42,6 +42,7 @@ myCar.paint("Red");
 myCar.speed = 135;      // setter
 myCar.speed = -50;      // ignore
 
+myCar.render();
 myCar.print();
 console.log("Speed: " + myCar.miles.toFixed(1) + "mi/h");
 
