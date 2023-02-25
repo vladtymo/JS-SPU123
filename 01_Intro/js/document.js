@@ -9,4 +9,4 @@ par.style.color = 'darkcyan';
 document.body.appendChild(par);
 
 // 2 - using document write
-//document.write(`<p style='color: darkcyan;'>Hello, dear: ${username}</p>`);
+document.write(`<p style='color: darkcyan;'>Hello, dear: ${username}</p>`);

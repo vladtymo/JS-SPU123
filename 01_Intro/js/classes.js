@@ -18,7 +18,7 @@ class Car {
         this.color = newColor;
     }
     render() {
-        document.write(`Car: ${this.model}, color: ${this.color}, year: ${this.year}`);
+        document.write(`<p>Car: ${this.model}, color: ${this.color}, year: ${this.year}</p>`);
     }
 
     // getter / setter
