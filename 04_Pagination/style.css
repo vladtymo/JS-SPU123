@@ -1,0 +1,13 @@
+#list {
+    gap: 10px;
+    text-align: center;
+}
+
+.product-card {
+    width: 18rem;
+    padding: 0;
+}
+.product-card img {
+    height: 100px;
+    object-fit: cover;
+}
