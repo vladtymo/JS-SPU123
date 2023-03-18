@@ -5,7 +5,7 @@ const productsUrl = 'https://dummyjson.com/products';
 let pagination = {
     total: null,
     skip: 0,
-    limit: 20,
+    limit: 5,
 
     nextPage() {
         this.skip += this.limit;
@@ -25,16 +25,34 @@ moreBtn.onclick = () => {
 loadProducts();
 
 // --------------- functions
-async function getDataFromServer(url) {
+// 1 - using async/await
+// async function getDataFromServer(url) {
+//     // send HTTP request
+//     let response = await fetch(url);
+//     console.log(`Status: ${response.status}`);
+
+//     // get body in JSON
+//     var data = await response.json();
+//     console.log(data);
+
+//     return data;
+// }
+// 2 - using then(onFullfiled, onRejected)
+function getDataFromServer(url) {
     // send HTTP request
-    let response = await fetch(url);
-    console.log(`Status: ${response.status}`);
+    return fetch(url).then((res) => {
+        console.log(`Status: ${res.status}`);
+        
+        // get body in JSON
+        return res.json();
 
-    // get body in JSON
-    var data = await response.json();
-    console.log(data);
-
-    return data;
+    }).then((data) => {
+        console.log(data);
+        return data;
+        
+    }).catch((err) => {
+        console.error(err);
+    });
 }
 
 async function loadProducts() {
